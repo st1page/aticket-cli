@@ -1,0 +1,18 @@
+#!/usr/bin/env python3.12
+"""Zero-install executable for the aticket-cli command.
+
+Run directly without pip install:
+
+    /path/to/aticket-cli/aticket-cli ticket new --topic demo --goal "..."
+
+Editable installs expose the same command name on PATH.
+"""
+import pathlib
+import sys
+
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+
+from ticket_cli.cli import main  # noqa: E402
+
+if __name__ == "__main__":
+    raise SystemExit(main())

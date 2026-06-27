@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aticket-cli"
+version = "0.1.0"
+description = "Consolidated CLI for agent work tickets (sqlite-backed TICKET.md + fork lifecycle)."
+requires-python = ">=3.12"
+authors = [{ name = "tsshi" }]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+aticket-cli = "ticket_cli.cli:main"
+
+[tool.setuptools]
+packages = ["ticket_cli"]
+
+[tool.setuptools.package-data]
+ticket_cli = ["templates/*.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

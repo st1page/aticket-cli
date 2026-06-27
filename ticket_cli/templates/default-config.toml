@@ -1,0 +1,6 @@
+[tickets]
+root = "/code/tsshi/agent-tickets"
+
+[archive]
+agent_confirm_large_dir_mib = 10
+human_confirm_large_dir_mib = 100
