@@ -26,16 +26,29 @@ Tickets live under `AGENT_TICKETS_ROOT` or the configured ticket root
 
 ## Install / run
 
-Zero install — just run the entrypoint with Python 3.12+:
+Install the current GitHub Release with Python 3.12+:
 
 ```bash
-/code/tsshi/aticket-cli/aticket-cli --help
+pip install https://github.com/st1page/aticket-cli/releases/download/v0.1.0/aticket_cli-0.1.0-py3-none-any.whl
 ```
 
-Or install to get an `aticket-cli` command on PATH:
+Or install from the tagged source:
 
 ```bash
-pip install -e /code/tsshi/aticket-cli   # provides `aticket-cli`
+pip install git+https://github.com/st1page/aticket-cli.git@v0.1.0
+```
+
+For local development:
+
+```bash
+git clone https://github.com/st1page/aticket-cli.git
+pip install -e ./aticket-cli
+```
+
+All install paths provide the `aticket-cli` command on PATH:
+
+```bash
+aticket-cli --help
 ```
 
 ## Commands
