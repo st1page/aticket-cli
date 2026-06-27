@@ -1,5 +1,10 @@
 # aticket-cli
 
+`aticket-cli` is intended to be used together with
+[`stone-harness`](https://github.com/st1page/stone-harness): this repository
+provides the ticket/workspace CLI, while `stone-harness` provides an example
+agent control-plane harness that depends on it.
+
 `aticket-cli` is a single binary-style CLI for agent **work tickets**. It
 consolidates what used to be scattered shell/python helpers into one
 agent-facing entrypoint, with `ticket` kept as the work-unit noun.
